@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://png.pngtree.com/background/20230527/original/pngtree-complex-network-of-shiny-objects-in-shape-of-clouds-in-a-picture-image_2756497.jpg"); /* Add your image URL here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.calculator {
+  background: rgba(0, 0, 0, 0.806);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(12, 148, 216, 0.821);
+  padding: 30px;
+  width: 420px;
+  height: 540px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.calculator:hover {
+  background-color: rgba(222, 212, 212, 0.594);
+}
+.display {
+  width: 100%;
+  height: 70px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: right;
+  background-color: #f1f1f1;
+  border: none;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #333;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.button {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.operator {
+  background-color: #ff8c00;
+  color: white;
+  border: 2px solid #ff7b00;
+}
+
+.operator:hover {
+  background-color: #e07b00;
+  border-color: #e06b00;
+  transform: scale(1.1);
+}
+
+.clear {
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+}
+
+.clear:hover {
+  background-color: #e04e4e;
+  transform: scale(1.1);
+}
+
+.equal {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  grid-column: span 2;
+}
+
+.equal:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    width: 380px;
+    height: 500px;
+  }
+  .display {
+    font-size: 2.5rem;
+  }
+  .button {
+    font-size: 1.8rem;
+    padding: 22px;
+  }
+}
